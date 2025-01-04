@@ -2,13 +2,13 @@
   <!-- 顶部栏 -->
   <van-nav-bar
       :title="title"
-      left-arrow
+      :left-arrow="false"
       @click-left="onClickLeft"
       @click-right="onClickRight"
       class="fixed-top-bar">
-    <template #right>
-      <van-icon name="search" size="18"/>
-    </template>
+    <!--    <template #right>-->
+    <!--      <van-icon name="search" size="18"/>-->
+    <!--    </template>-->
   </van-nav-bar>
 
   <!-- 内容 -->
@@ -16,13 +16,20 @@
     <router-view/>
   </div>
 
-  <!-- 底部菜单栏 -->
   <van-tabbar v-model="active" active-color="#4169E1">
-    <van-tabbar-item to="/" name="index" icon="home-o">主页</van-tabbar-item>
-    <van-tabbar-item to="/team" name="team" icon="search">队伍</van-tabbar-item>
-    <van-tabbar-item to="/chat" name="chat" icon="friends-o">消息</van-tabbar-item>
-    <van-tabbar-item to="/user" name="user" icon="setting-o">个人</van-tabbar-item>
+    <van-row  style="width: 100%;margin-top: 12px">
+      <van-col span="24" style="text-align: center;margin-top: 12px">中华人民共和国成都海关 | 中国银行</van-col>
+    </van-row>
   </van-tabbar>
+
+
+  <!-- 底部菜单栏 -->
+  <!--  <van-tabbar v-model="active" active-color="#4169E1">-->
+  <!--    <van-tabbar-item to="/" name="index" icon="home-o">主页</van-tabbar-item>-->
+  <!--    <van-tabbar-item to="/team" name="team" icon="search">队伍</van-tabbar-item>-->
+  <!--    <van-tabbar-item to="/chat" name="chat" icon="friends-o">消息</van-tabbar-item>-->
+  <!--    <van-tabbar-item to="/user" name="user" icon="setting-o">个人</van-tabbar-item>-->
+  <!--  </van-tabbar>-->
 
 </template>
 
@@ -32,7 +39,7 @@ import {ref} from "vue";
 import routes from "../config/router.ts";
 
 const router = useRouter();
-const DEFAULT_TITLE = '伙伴匹配';
+const DEFAULT_TITLE = '进出境旅客携带物品查询';
 
 const title = ref(DEFAULT_TITLE); // 页面标题
 

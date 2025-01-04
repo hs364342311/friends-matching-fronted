@@ -3,10 +3,11 @@ import {showFailToast} from "vant";
 
 // 多环境
 const isDev = process.env.NODE_ENV === 'development';
+const baseUrl = window.location.href;
 
 const myAxios = axios.create({
     // todo 设置为自己的服务器地址
-    baseURL: isDev ? 'http://localhost:9090/api' : 'http://your-host:9090/api',
+    baseURL: isDev ? '/api' : `${baseUrl}/api`,
 })
 
 myAxios.defaults.withCredentials=true; // 向后台发送请求时携带凭证
