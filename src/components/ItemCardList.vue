@@ -30,7 +30,7 @@
       </van-space>
     </van-skeleton>
   </van-grid>
-  <van-back-top bottom="12vh"/>
+  <van-back-top bottom="14vh"/>
 
 
 </template>

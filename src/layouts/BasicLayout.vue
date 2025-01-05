@@ -18,18 +18,19 @@
 
   <van-tabbar v-model="active" active-color="#4169E1">
     <van-row  style="width: 100%;margin-top: 12px">
-      <van-col span="24" style="text-align: center;margin-top: 12px">中华人民共和国成都海关 | 中国银行</van-col>
+      <van-col span="14" style="text-align: center;margin-top: 12px"><van-icon name="images/haiguan.png" style="padding-right: 3px;height: 13px;"></van-icon><span>中华人民共和国成都海关</span></van-col>
+      <van-col span="10" style="text-align: center;margin-top: 12px"><van-icon name="images/gonghang.png" style="padding-right: 3px;height: 13px;"></van-icon><span>中国银行</span></van-col>
     </van-row>
   </van-tabbar>
 
 
   <!-- 底部菜单栏 -->
-  <!--  <van-tabbar v-model="active" active-color="#4169E1">-->
-  <!--    <van-tabbar-item to="/" name="index" icon="home-o">主页</van-tabbar-item>-->
-  <!--    <van-tabbar-item to="/team" name="team" icon="search">队伍</van-tabbar-item>-->
-  <!--    <van-tabbar-item to="/chat" name="chat" icon="friends-o">消息</van-tabbar-item>-->
-  <!--    <van-tabbar-item to="/user" name="user" icon="setting-o">个人</van-tabbar-item>-->
-  <!--  </van-tabbar>-->
+<!--    <van-tabbar v-model="active" active-color="#4169E1">-->
+<!--      <van-tabbar-item to="/" name="index" icon="home-o">主页</van-tabbar-item>-->
+<!--      <van-tabbar-item to="/team" name="team" icon="search">队伍</van-tabbar-item>-->
+<!--      <van-tabbar-item to="/chat" name="chat" icon="friends-o">消息</van-tabbar-item>-->
+<!--      <van-tabbar-item to="/user" name="user" icon="setting-o">个人</van-tabbar-item>-->
+<!--    </van-tabbar>-->
 
 </template>
 
@@ -85,6 +86,6 @@ const updateActive = (toPath: string) => {
 <style scoped>
 #content {
   padding-top: 46px; /* 确保内容不会被固定的顶部栏遮挡 */
-  padding-bottom: 50px;
+  padding-bottom: 80px;
 }
 </style>
