@@ -6,7 +6,7 @@
       <div class="welcome-content">
         <p>各位出入境旅客：</p>
         <p>为保障您的旅途顺畅，请务必注意以下事项：</p>
-        
+
         <h2>一、行前准备</h2>
         <ol>
           <li>通过海关总署等官方渠道，全面了解目的地国家（地区）出入境政策法规及禁止入境物品清单；</li>
@@ -22,10 +22,11 @@
 
         <h2>三、特别提示</h2>
         <p>我国海关已全面实行"旅客通关管理系统"，所有申报记录将纳入个人通关信用档案，请共同维护良好出行信用。</p>
-        
-        <p class="footer-message">文明出行始于守法，如实申报既是公民义务，更是对自身权益的最佳保障。祝您安心出行，旅途顺遂！</p>
+
+        <p class="footer-message">文明出行始于守法，如实申报既是公民义务，更是对自身权益的最佳保障。<br>祝您安心出行，旅途顺遂！</br></p>
+
       </div>
-      
+
       <div class="button-container">
         <van-button type="primary" size="large" @click="enterApp">进入查询系统</van-button>
       </div>
@@ -96,7 +97,7 @@ const enterApp = () => {
 .footer-message {
   font-weight: bold;
   margin-top: 20px;
-  text-align: center;
+  text-align: left;
   color: #1989fa;
 }
 
@@ -104,4 +105,4 @@ const enterApp = () => {
   margin-top: 30px;
   text-align: center;
 }
-</style> 
+</style>
