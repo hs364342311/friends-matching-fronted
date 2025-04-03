@@ -40,7 +40,7 @@ import { useRouter } from 'vue-router';
 const router = useRouter();
 
 const enterApp = () => {
-  router.push('/item/list');
+  router.push('/item/detail');
 };
 </script>
 
