@@ -3,11 +3,15 @@ import {showFailToast} from "vant";
 
 // 多环境
 const isDev = process.env.NODE_ENV === 'development';
-const baseUrl = window.location.href;
+
+// 获取当前域名和端口
+const getBaseUrl = () => {
+    const {protocol, hostname, port} = window.location;
+    return `${protocol}//${hostname}${port ? `:${port}` : ''}`;
+};
 
 const myAxios = axios.create({
-    // todo 设置为自己的服务器地址
-    baseURL: isDev ? '/api' : `${baseUrl}/api`,
+    baseURL: isDev ? '/api' : `${getBaseUrl()}/api`,
 })
 
 myAxios.defaults.withCredentials=true; // 向后台发送请求时携带凭证
@@ -33,7 +37,6 @@ myAxios.interceptors.response.use(function (response) {
         if (!(window.location.pathname === loginPage)) {
             window.location.href = `${loginPage}?redirect=${redirectUrl}`;
         }
-
     }
     return response.data;
 }, function (error) {
