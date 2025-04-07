@@ -4,8 +4,8 @@
     <div class="detail-container">
       <!-- 页面头部 -->
       <div class="page-header">
-        <img src="../assets/logo.png" alt="海关logo" class="logo"/>
-        <h1 class="page-title">进出境物品查询</h1>
+<!--        <img src="../assets/logo.png" alt="海关logo" class="logo"/>-->
+        <h1 class="page-title">进出境旅客及行李物品<br>通关规定查询</h1>
         <p class="page-subtitle"></p>
       </div>
 
@@ -45,8 +45,7 @@
           <van-icon name="guide-o" size="24" color="#1989fa"/>
           <div class="tip-content">
             <h3>温馨提醒</h3>
-            <p>如需咨询更多信息，请拨打海关服务热线</p>
-            <a class="service-phone" href="tel:028-12360">028-12360</a>
+            <p>如需查询更多信息，请拨打海关服务热线<a class="service-phone" href="tel:12360">12360</a>。</p>
           </div>
         </div>
       </div>
@@ -87,7 +86,7 @@
             <img src="../assets/custom-empty-image.png" />
           </template>
           <template #description>
-            <p class="empty-tip">关于您搜索的物品，可以咨询成都海关服务热线  <a class="service-phone" href="tel:028-12360">028-12360</a></p>
+            <p class="empty-tip">关于您搜索的物品，可以咨询海关服务热线  <a class="service-phone" href="tel:12360">12360</a></p>
           </template>
         </van-empty>
       </div>

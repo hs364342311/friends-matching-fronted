@@ -1,27 +1,27 @@
 <template>
   <!-- 顶部栏 -->
-  <van-nav-bar
-      :title="title"
-      :left-arrow="false"
-      @click-left="onClickLeft"
-      @click-right="onClickRight"
-      class="fixed-top-bar">
-    <!--    <template #right>-->
-    <!--      <van-icon name="search" size="18"/>-->
-    <!--    </template>-->
-  </van-nav-bar>
+<!--  <van-nav-bar-->
+<!--      :title="title"-->
+<!--      :left-arrow="false"-->
+<!--      @click-left="onClickLeft"-->
+<!--      @click-right="onClickRight"-->
+<!--      class="fixed-top-bar">-->
+<!--    &lt;!&ndash;    <template #right>&ndash;&gt;-->
+<!--    &lt;!&ndash;      <van-icon name="search" size="18"/>&ndash;&gt;-->
+<!--    &lt;!&ndash;    </template>&ndash;&gt;-->
+<!--  </van-nav-bar>-->
 
   <!-- 内容 -->
   <div id="content">
     <router-view/>
   </div>
 
-  <van-tabbar v-model="active" active-color="#4169E1">
-    <van-row  style="width: 100%;margin-top: 12px">
-      <van-col span="14" style="text-align: center;margin-top: 12px"><van-icon name="images/haiguan.png" style="padding-right: 3px;height: 13px;"></van-icon><span>中华人民共和国成都海关</span></van-col>
-      <van-col span="10" style="text-align: center;margin-top: 12px"><van-icon name="images/gonghang.png" style="padding-right: 3px;height: 13px;"></van-icon><span>中国银行</span></van-col>
-    </van-row>
-  </van-tabbar>
+<!--  <van-tabbar v-model="active" active-color="#4169E1">-->
+<!--    <van-row  style="width: 100%;margin-top: 12px">-->
+<!--      <van-col span="14" style="text-align: center;margin-top: 12px"><van-icon name="images/haiguan.png" style="padding-right: 3px;height: 13px;"></van-icon><span>中华人民共和国成都海关</span></van-col>-->
+<!--      <van-col span="10" style="text-align: center;margin-top: 12px"><van-icon name="images/gonghang.png" style="padding-right: 3px;height: 13px;"></van-icon><span>中国银行</span></van-col>-->
+<!--    </van-row>-->
+<!--  </van-tabbar>-->
 
 
   <!-- 底部菜单栏 -->
@@ -85,7 +85,7 @@ const updateActive = (toPath: string) => {
 
 <style scoped>
 #content {
-  padding-top: 46px; /* 确保内容不会被固定的顶部栏遮挡 */
-  padding-bottom: 80px;
+  padding-top: 5px; /* 确保内容不会被固定的顶部栏遮挡 */
+  padding-bottom: 5px;
 }
 </style>
