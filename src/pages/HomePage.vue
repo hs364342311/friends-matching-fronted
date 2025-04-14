@@ -40,7 +40,7 @@
         </router-link>
 
         <!-- 海关总署令及公告 -->
-        <a class="nav-card" href="http://www.customs.gov.cn/customs/302249/index.html" target="_blank">
+        <a class="nav-card" href="http://www.customs.gov.cn/customs/302249/index.html">
           <div class="card-icon">
             <van-icon name="description" size="32" color="#1989fa"/>
           </div>
@@ -57,7 +57,7 @@
 
       <!-- 底部版权信息 -->
       <div class="footer">
-        <p>成都海关和中国银行四川省分行联合开发</p>
+        <p>成都海关 中国银行四川省分行联合开发</p>
       </div>
     </div>
   </div>
