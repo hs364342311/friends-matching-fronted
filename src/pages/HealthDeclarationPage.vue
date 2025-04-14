@@ -4,7 +4,7 @@
     <div class="health-container">
       <!-- 页面头部 -->
       <div class="page-header">
-        <h1 class="page-title">进出境旅客及行李物品<br>通关规定查询</h1>
+        <h1 class="page-title">健康申报责任义务</h1>
       </div>
 
       <!-- 内容区域 -->
@@ -12,7 +12,7 @@
         <!-- 健康申报部分 -->
         <div class="info-card">
           <div class="info-header">
-            <van-tag type="primary" size="medium">健康申报</van-tag>
+            <van-tag type="primary" size="medium">须申报情形</van-tag>
           </div>
           <div class="info-content">
             如实申报健康状况及相关信息，有发热、咳嗽、呼吸困难、呕吐、腹泻、皮疹、不明原因皮下出血等传染病症状，或已经诊断患有传染性疾病的进境出境人员须主动向海关进行健康申报。

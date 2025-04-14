@@ -25,7 +25,7 @@
             <van-icon name="search" size="32" color="#1989fa"/>
           </div>
           <div class="card-content">
-            <h3>行李物品监管规定查询</h3>
+            <h3>行李物品通关规定查询</h3>
           </div>
         </router-link>
 
@@ -35,7 +35,7 @@
             <van-icon name="shield-o" size="32" color="#1989fa"/>
           </div>
           <div class="card-content">
-            <h3>健康申报规定查询</h3>
+            <h3>健康申报规定</h3>
           </div>
         </router-link>
 
@@ -54,6 +54,11 @@
 <!--      <div class="feedback-section">-->
 <!--        <p>如对小程序有更多意见建议，欢迎在此留言</p>-->
 <!--      </div>-->
+
+      <!-- 底部版权信息 -->
+      <div class="footer">
+        <p>成都海关和中国银行四川省分行联合开发</p>
+      </div>
     </div>
   </div>
 </template>
@@ -74,6 +79,7 @@
   max-width: 600px;
   margin: 0 auto;
   padding: 20px 16px;
+  padding-bottom: 80px;
 }
 
 .page-header {
@@ -148,6 +154,27 @@
   color: #666;
 }
 
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.08);
+  z-index: 100;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 /* 移动端适配 */
 @media (max-width: 768px) {
   .home-page {
@@ -173,6 +200,14 @@
 
   .feedback-section {
     margin-top: 32px;
+  }
+
+  .footer {
+    padding: 12px 16px;
+  }
+
+  .footer p {
+    font-size: 13px;
   }
 }
 </style>

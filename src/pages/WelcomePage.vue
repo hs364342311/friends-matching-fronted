@@ -4,8 +4,8 @@
     <div class="welcome-card">
       <!-- <h1 class="welcome-title">温馨出行提醒</h1> -->
       <div class="welcome-content">
-        <p class="content-text">进出境旅客：</p>
-        <p class="content-text">为保障您的旅途顺畅，提醒关注以下事项：</p>
+        <p class="content-text">各位进出境旅客：</p>
+        <p class="content-text" style="text-indent: 2em;">为保障您的国际（地区）旅途顺畅，提醒关注以下事项：</p>
 
         <h2>一、行前准备</h2>
         <ol>
@@ -14,7 +14,7 @@
 
         <h2>二、申报须知</h2>
         <ol>
-          <li>按照海关总署公告2023年第151号（关于优化调整健康申报模式的公告）、海关总署公告2025年第43号（关于进出境人员行李物品申报有关事宜的公告） 等规定，请如实进行物品申报及健康申报，并主动配合海关检查。</li>
+          <li>按照中国相关法律规定，请如实进行物品申报及健康申报，并主动配合海关检查。</li>
         </ol>
 
         <h2>三、温馨提示</h2>

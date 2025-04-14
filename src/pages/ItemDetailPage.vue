@@ -5,7 +5,7 @@
       <!-- 页面头部 -->
       <div class="page-header">
 <!--        <img src="../assets/logo.png" alt="海关logo" class="logo"/>-->
-        <h1 class="page-title">进出境旅客及行李物品<br>通关规定查询</h1>
+        <h1 class="page-title">行李物品通关规定查询</h1>
         <p class="page-subtitle"></p>
       </div>
 
