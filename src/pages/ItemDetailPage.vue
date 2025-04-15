@@ -55,6 +55,11 @@
         <div class="result-card">
           <div class="result-header">
             <h2>查询结果</h2>
+            <van-icon 
+              name="clear" 
+              class="clear-icon" 
+              @click="clearSearch"
+            />
           </div>
           <div class="result-content">
             <div class="info-item">
@@ -207,6 +212,13 @@ const selectItem = (item) => {
   searchResult.value = item;
   showItemList.value = false;
 };
+
+const clearSearch = () => {
+  searchKeyword.value = '';
+  searchResult.value = null;
+  showEmptyResult.value = false;
+  showItemList.value = false;
+};
 </script>
 
 <style scoped>
@@ -278,12 +290,27 @@ const selectItem = (item) => {
   background: #1989fa;
   color: white;
   padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .result-header h2 {
   margin: 0;
   font-size: 18px;
   font-weight: 500;
+}
+
+.clear-icon {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.clear-icon:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .result-content {
