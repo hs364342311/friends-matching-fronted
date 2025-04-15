@@ -5,21 +5,21 @@
       <!-- <h1 class="welcome-title">温馨出行提醒</h1> -->
       <div class="welcome-content">
         <p class="content-text">各位进出境旅客：</p>
-        <p class="content-text" style="text-indent: 2em;">为保障您的国际（地区）旅途顺畅，提醒关注以下事项：</p>
+        <p class="content-text" style="text-indent: 2em;">为保障您的国际（地区）旅途通关便捷，提醒关注以下事项：</p>
 
         <h2>一、行前准备</h2>
         <ol>
-          <li>请通过海关总署门户网站等官方渠道，全面了解出入境相关规定、禁限物品清单等；认真核对携带物品是否符合检验检疫相关要求。</li>
+          <li style="text-indent: 2em;">请通过海关总署门户网站等官方渠道，全面了解出入境相关规定、禁限物品清单等；认真核对携带物品是否符合检验检疫相关要求。</li>
         </ol>
 
         <h2>二、申报须知</h2>
         <ol>
-          <li>按照中国相关法律法规，请如实进行物品申报及健康申报，并主动配合海关检查。</li>
+          <li style="text-indent: 2em;">按照中国相关法律法规，请如实进行物品申报及健康申报，并主动配合海关检查。</li>
         </ol>
 
         <h2>三、温馨提示</h2>
         <ol>
-          <li>本小程序将根据国家相关法律法规及规范性文件的调整不定期更新，相关通关规定供您参考；未尽事项，请拨打海关服务热线（<a class="service-phone" href="tel:12360">12360</a>）。</li>
+          <li style="text-indent: 2em;">本小程序将根据国家相关法律法规及规范性文件的调整不定期更新，相关通关规定供您参考；未尽事项，请拨打海关服务热线（<a class="service-phone" href="tel:12360">12360</a>）。</li>
         </ol>
 
 <!--        <p class="footer-message">文明出行始于守法，如实申报既是公民义务，更是对自身权益的最佳保障。<br>祝您安心出行，旅途顺遂！</br></p>-->
@@ -27,8 +27,13 @@
       </div>
 
       <div class="button-container">
-        <van-button type="primary" size="large" @click="enterApp">进入查询系统</van-button>
+        <van-button type="primary" size="large" @click="enterApp" style="font-size: 16px">进入查询系统</van-button>
       </div>
+    </div>
+
+    <!-- 底部版权信息 -->
+    <div class="footer">
+      <p style="font-family: 'SimHei', '黑体'; color: #000000;">成都海关 中国银行四川省分行联合开发</p>
     </div>
   </div>
 </template>
@@ -122,7 +127,7 @@ const enterApp = () => {
 }
 
 .welcome-content ol {
-  padding-left: 20px;
+  /*padding-left: 20px;*/
   margin: 0 0 16px;
 }
 
@@ -194,6 +199,39 @@ const enterApp = () => {
     width: 90%;
     height: 40px;
     font-size: 15px;
+  }
+}
+
+/* 底部版权信息样式 */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.08);
+  z-index: 100;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* 移动端底部适配 */
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 12px 16px;
+  }
+
+  .footer p {
+    font-size: 13px;
   }
 }
 </style>

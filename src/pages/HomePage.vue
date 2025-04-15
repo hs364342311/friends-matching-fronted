@@ -57,7 +57,7 @@
 
       <!-- 底部版权信息 -->
       <div class="footer">
-        <p>成都海关 中国银行四川省分行联合开发</p>
+        <p style="font-family: 'SimHei', '黑体'; color: #000000;">成都海关 中国银行四川省分行联合开发</p>
       </div>
     </div>
   </div>
