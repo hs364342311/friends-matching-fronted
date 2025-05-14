@@ -10,7 +10,7 @@
       
       <!-- 提示区域 -->
       <div class="notice-section">
-        <img src="../assets/卡通人像.png" alt="customs officer" class="officer-image">
+        <img src="@/assets/卡通人物-禁限物品介绍.png" alt="customs officer" class="officer-image">
         <div class="notice-bubble">
           下面列出的都是禁止或限制进出境的物品，不能随意携带通关哦！
         </div>
@@ -30,7 +30,7 @@
     <!-- 底部提示区域 -->
     <div class="bottom-section">
       <div class="message-container">
-        <img src="../assets/卡通人像.png" alt="customs officer" class="officer-image">
+        <img src="@/assets/卡通人物-关于禁止或限制携带进出境的物品.png" alt="customs officer" class="officer-image">
         <div class="message-bubble">
           关于禁止或限制携带进出境的物品，可以参考以下内容
         </div>
@@ -39,12 +39,6 @@
 
     <!-- 详细信息区域 -->
     <div class="details-section">
-      <!-- 法律依据 -->
-      <div class="info-card">
-        <div class="info-content legal-basis">
-          根据国家有关法律、法规规定，海关调整《中华人民共和国禁止进出境物品表》和《中华人民共和国限制进出境物品表》，并以海关总署令第43号公布执行。具体如下：
-        </div>
-      </div>
 
       <!-- 中华人民共和国禁止进出境物品表 -->
       <div class="info-card">
@@ -152,52 +146,60 @@
 <script setup>
 const restrictedItems = [
   {
+    label: '武器弹药、仿真武器、管制刀具',
+    image: new URL('@/assets/武器弹药、仿真武器、管制刀具.png', import.meta.url).href
+  },
+  {
+    label: '对中国政治、经济、文化、道德有害的印刷品、胶卷、照片、唱片、影片、录音带、录像带、激光视盘、计算机存储介质及其它物品',
+    image: new URL('@/assets/对中国政治、经济、文化、道德有害的印刷品、胶卷、照片、唱片、影片、录音带、录像带、激光视盘、计算机存储介质及其它物品.png', import.meta.url).href
+  },
+  {
     label: '毒品和管制类精神药品',
-    image: new URL('../assets/毒品和管制类精神药品.png', import.meta.url).href
+    image: new URL('@/assets/毒品和管制类精神药品.png', import.meta.url).href
   },
   {
     label: '濒危物种及其制品',
-    image: new URL('../assets/濒危物种及其制品.png', import.meta.url).href
+    image: new URL('@/assets/濒危物种及其制品.png', import.meta.url).href
   },
   {
     label: '活体动物、异宠等',
-    image: new URL('../assets/活体动物、异宠等.png', import.meta.url).href
+    image: new URL('@/assets/活体动物、异宠等.png', import.meta.url).href
   },
   {
     label: '肉制品',
-    image: new URL('../assets/肉制品.png', import.meta.url).href
+    image: new URL('@/assets/肉制品.png', import.meta.url).href
   },
   {
     label: '植物、盆栽',
-    image: new URL('../assets/植物、盆栽.png', import.meta.url).href
+    image: new URL('@/assets/植物、盆栽.png', import.meta.url).href
   },
   {
     label: '新鲜水果',
-    image: new URL('../assets/新鲜水果.png', import.meta.url).href
+    image: new URL('@/assets/新鲜水果.png', import.meta.url).href
   },
   {
     label: '种子',
-    image: new URL('../assets/种子.png', import.meta.url).href
+    image: new URL('@/assets/种子.png', import.meta.url).href
   },
   {
     label: '土壤',
-    image: new URL('../assets/土壤.png', import.meta.url).href
+    image: new URL('@/assets/土壤.png', import.meta.url).href
   },
   {
     label: '疫苗、生物样本',
-    image: new URL('../assets/疫苗、生物样本.png', import.meta.url).href
+    image: new URL('@/assets/疫苗、生物样本.png', import.meta.url).href
   },
   {
     label: '动物标本',
-    image: new URL('../assets/动物标本.png', import.meta.url).href
+    image: new URL('@/assets/动物标本.png', import.meta.url).href
   },
   {
-    label: '燕窝。经商业无菌处理的罐头装燕窝除外',
-    image: new URL('../assets/燕窝。经商业无菌处理的罐头装燕窝除外.png', import.meta.url).href
+    label: '燕窝（经商业无菌处理的罐头装燕窝除外）。',
+    image: new URL('@/assets/燕窝。经商业无菌处理的罐头装燕窝除外.png', import.meta.url).href
   },
   {
     label: '西洋参',
-    image: new URL('../assets/西洋参.png', import.meta.url).href
+    image: new URL('@/assets/西洋参.png', import.meta.url).href
   }
 ]
 </script>
@@ -206,7 +208,7 @@ const restrictedItems = [
 .customs-restrictions {
   min-height: 100vh;
   background-color: #87CEEB;
-  padding: 20px;
+  /* padding: 20px; */
   position: relative;
   overflow: hidden;
 }
@@ -218,8 +220,11 @@ const restrictedItems = [
 
 .title-container {
   background-color: #00A0E9;
-  padding: 15px 30px;
-  margin: -20px -20px 20px -20px;
+  padding: 8px 16px;
+  width: 66%;
+  margin-left: 24%;
+  margin-right: 10px;
+  /* margin: -20px -20px 20px -20px; */
 }
 
 .main-title {
@@ -233,55 +238,54 @@ const restrictedItems = [
 .notice-section {
   display: flex;
   align-items: flex-start;
-  gap: 15px;
+  gap: 6px;
   padding: 0 10px;
   margin-top: 20px;
 }
 
 .officer-image {
-  width: 80px;
+  width: 90px;
   height: auto;
   margin-top: -10px;
+  margin-left: -10px;
 }
 
 .notice-bubble {
   background: white;
-  border-radius: 15px;
-  padding: 15px 20px;
+  border-radius: 12px;
+  padding: 20px 20px;
   color: #333;
   font-size: 16px;
   position: relative;
-  margin-left: 10px;
+  margin-left: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   flex: 1;
 }
 
 .notice-bubble::before {
-  content: '';
+  /* content: '';
   position: absolute;
   left: -10px;
   top: 20px;
   border-style: solid;
   border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
+  border-color: transparent white transparent transparent; */
 }
 
 .items-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 25px;
-  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0px 10px;
+  margin-top: -30px;
 }
 
 .item-card {
-  background: white;
-  border-radius: 15px;
   padding: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
@@ -291,13 +295,9 @@ const restrictedItems = [
 }
 
 .item-image-container {
-  width: 100%;
-  aspect-ratio: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f8f8f8;
-  border-radius: 12px;
   padding: 15px;
   overflow: hidden;
 }
@@ -312,9 +312,9 @@ const restrictedItems = [
   background: #00A0E9;
   color: white;
   padding: 8px 16px;
-  border-radius: 20px;
+  border-radius: 6px;
   font-size: 14px;
-  text-align: center;
+  text-align: left;
   width: fit-content;
   max-width: 100%;
   box-shadow: 0 2px 4px rgba(0, 160, 233, 0.2);
@@ -322,12 +322,21 @@ const restrictedItems = [
 
 @media (max-width: 768px) {
   .items-list {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 15px;
   }
 
+  .item-card {
+    padding: 10px;
+  }
+  
+  .item-image-container {
+    /* width: 80px;
+    height: 80px;
+    padding: 8px; */
+  }
+
   .title-container {
-    padding: 12px 20px;
+    padding: 8px 16px;
   }
 
   .main-title {
@@ -335,12 +344,12 @@ const restrictedItems = [
   }
 
   .officer-image {
-    width: 60px;
+    /* width: 60px; */
   }
 
   .notice-bubble {
     font-size: 14px;
-    padding: 12px 16px;
+    padding: 20px 16px;
   }
 }
 
@@ -415,23 +424,24 @@ const restrictedItems = [
 .message-bubble {
   background: white;
   border-radius: 15px;
-  padding: 15px 20px;
+  padding: 20px 20px;
   color: #333;
   font-size: 16px;
   position: relative;
   margin-left: 10px;
+  margin-top: 23px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   flex: 1;
 }
 
 .message-bubble::before {
-  content: '';
+  /* content: '';
   position: absolute;
   left: -10px;
   top: 20px;
   border-style: solid;
   border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
+  border-color: transparent white transparent transparent; */
 }
 
 @media (max-width: 768px) {

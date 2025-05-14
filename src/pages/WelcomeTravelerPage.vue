@@ -2,10 +2,10 @@
   <div class="traveler-bg">
     <!-- 顶层装饰元素 -->
     <div class="top-decor">
-      <img src="../assets/卡通人像.png" alt="avatar" class="avatar-abs" />
       <img src="../assets/白云.png" alt="cloud" class="cloud-abs" />
     </div>
     <div class="traveler-card">
+      <img src="../assets/卡通人像.png" alt="avatar" class="avatar-abs" />
       <div class="traveler-content">
         <p class="traveler-title">各位进出境旅客朋友：</p>
         <p class="traveler-p indent">欢迎从中国海关通关，从出发至到达，中国海关将为您提供便捷、高效的通关服务，为您的旅途带来更好的体验。</p>
@@ -53,8 +53,8 @@ const enterApp = () => {
 }
 .avatar-abs {
   position: absolute;
-  top: 18px;
-  left: 18px;
+  top: -90px;
+  left: -20px;
   width: 90px;
   z-index: 101;
   pointer-events: none;
@@ -150,8 +150,8 @@ const enterApp = () => {
   }
   .avatar-abs {
     width: 56px;
-    top: 22px;
-    left: 4px;
+    top: -25px;
+    left: -15px;
   }
   .cloud-abs {
     width: 54px;

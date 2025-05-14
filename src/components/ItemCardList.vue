@@ -20,11 +20,11 @@
                 <div v-html="item.supervise" class="supervise-text"></div>
               </template>
             </van-cell>
-            <van-cell title="规定依据">
+            <!-- <van-cell title="规定依据">
               <template #value>
                 <div v-html="item.stipulate" class="supervise-text"></div>
               </template>
-            </van-cell>
+            </van-cell> -->
           </van-cell-group>
         </van-grid-item>
       </van-space>

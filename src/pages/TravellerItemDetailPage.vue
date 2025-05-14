@@ -78,12 +78,12 @@
               </div>
               <div class="value" v-html="searchResult.supervise"></div>
             </div>
-            <div class="info-item">
+            <!-- <div class="info-item">
               <div class="label">
                 <van-tag type="primary" size="medium">规定依据</van-tag>
               </div>
               <div class="value" v-html="searchResult.stipulate"></div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

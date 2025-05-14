@@ -3,9 +3,9 @@
   <div class="health-notice">
     <!-- 顶部区域 -->
     <div class="top-section">
-      <img src="../assets/白云.png" alt="cloud" class="cloud-image">
+      <img src="@/assets/白云.png" alt="cloud" class="cloud-image">
       <div class="header-content">
-        <img src="../assets/卡通人像.png" alt="character" class="character-image">
+        <img src="@/assets/健康申报提示.png" alt="character" class="character-image">
         <div class="notice-title">健康申报提示</div>
       </div>
     </div>
@@ -14,29 +14,29 @@
     <div class="notice-text">
       <div class="text-box">
         <p class="title">各位进出境旅客朋友：</p>
-        <p class="content">
+        <p class="content" style="text-indent: 2em;">
           快乐的旅程让人难忘，身体状态请多关注。
         </p>
-        <p class="content">
-          为了您和大家的健康和安全，如您发现自己或同行人有以下情况，请在航程途中向机组、在进境时向海关申报健康状况及相关信息。
+        <p class="content" style="text-indent: 2em;">
+          为了您和大家的健康和安全，如您发现自己或同行人有以下情况，请在航程途中向机组、在进出境时向海关申报健康状况及相关信息。
         </p>
       </div>
     </div>
 
     <!-- 症状列表区域 -->
-    <div class="symptoms-list">
-      <div v-for="(symptom, index) in symptoms" :key="index" class="symptom-item">
+    <div class="symptoms-container">
+      <div v-for="(symptom, index) in symptoms" :key="index" class="symptom-card">
+        <div class="symptom-label"><span style="background-color: #FFB6C1; border-radius: 6px; padding: 5px 10px;">{{ symptom.label }}</span></div>
         <div class="symptom-image-container">
           <img :src="symptom.image" :alt="symptom.label" class="symptom-image">
         </div>
-        <div class="symptom-label">{{ symptom.label }}</div>
       </div>
     </div>
 
     <!-- 底部提示区域 -->
     <div class="bottom-section">
       <div class="message-container">
-        <img src="../assets/卡通人像.png" alt="character" class="character-image">
+        <img src="@/assets/卡通人物-健康申报提示信息.png" alt="character" class="character-image">
         <div class="message-bubble">
           更多健康申报提示信息，可以参考以下内容
         </div>
@@ -72,27 +72,27 @@
 const symptoms = [
   {
     label: '发热',
-    image: new URL('../assets/发热.png', import.meta.url).href
+    image: new URL('@/assets/发热.png', import.meta.url).href
   },
   {
     label: '咳嗽',
-    image: new URL('../assets/咳嗽.png', import.meta.url).href
+    image: new URL('@/assets/咳嗽.png', import.meta.url).href
   },
   {
     label: '呼吸困难',
-    image: new URL('../assets/呼吸困难.png', import.meta.url).href
+    image: new URL('@/assets/呼吸困难.png', import.meta.url).href
   },
   {
     label: '呕吐、腹泻',
-    image: new URL('../assets/呕吐、腹泻.png', import.meta.url).href
+    image: new URL('@/assets/呕吐、腹泻.png', import.meta.url).href
   },
   {
     label: '皮疹',
-    image: new URL('../assets/皮疹.png', import.meta.url).href
+    image: new URL('@/assets/皮疹.png', import.meta.url).href
   },
   {
-    label: '不明原因皮下出血',
-    image: new URL('../assets/不明原因皮下出血.png', import.meta.url).href
+    label: '不明原因皮下出血等症状',
+    image: new URL('@/assets/不明原因皮下出血.png', import.meta.url).href
   }
 ]
 </script>
@@ -104,11 +104,14 @@ const symptoms = [
   padding: 20px;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .top-section {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .cloud-image {
@@ -122,12 +125,12 @@ const symptoms = [
 .header-content {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
   padding: 10px;
 }
 
 .character-image {
-  width: 50px;
+  width: 60px;
   height: auto;
 }
 
@@ -135,17 +138,21 @@ const symptoms = [
   color: white;
   font-size: 24px;
   font-weight: bold;
+  background-color: #1E90FF;
+  padding: 8px 35px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .notice-text {
-  margin: 20px 0;
+  margin-bottom: 10px;
+  padding: 0px 15px;
 }
 
 .text-box {
   background: white;
   border-radius: 15px;
   padding: 20px;
-  margin-bottom: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -161,52 +168,50 @@ const symptoms = [
   line-height: 1.5;
 }
 
-.symptoms-list {
+.symptoms-container {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding: 0 10px;
+  padding: 0 30px;
 }
 
-.symptom-item {
-  background: white;
-  border-radius: 15px;
-  padding: 15px;
+.symptom-card {
   display: flex;
-  align-items: center;
-  gap: 15px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.symptom-image-container {
-  width: 120px;
-  height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #FFE4E4;
-  border-radius: 12px;
-  padding: 10px;
-}
-
-.symptom-image {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .symptom-label {
-  background: #FFB6C1;
+  width: 30%;
   color: white;
-  padding: 8px 16px;
-  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 16px;
   font-weight: 500;
+  text-align: center;
+}
+
+.symptom-image-container {
+  width: 70%;
+  padding: 15px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 150px;
+}
+
+.symptom-image {
+  width: auto;
+  height: 110%;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .bottom-section {
-  margin: 30px 0 20px;
-  padding: 0 10px;
+  margin: 10px 0;
 }
 
 .message-container {
@@ -215,45 +220,31 @@ const symptoms = [
   gap: 10px;
 }
 
-.character-image {
-  width: 60px;
-  height: auto;
-}
-
 .message-bubble {
   background: white;
-  padding: 15px 20px;
-  border-radius: 20px;
+  margin-top: 10px;
+  border-radius: 15px;
   position: relative;
   color: #1989fa;
   font-size: 16px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   flex: 1;
-}
-
-.message-bubble::before {
-  content: '';
-  position: absolute;
-  left: -8px;
-  top: 20px;
-  width: 15px;
-  height: 15px;
-  background: white;
-  transform: rotate(45deg);
-  box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 20px 16px;
 }
 
 /* 申报信息详情样式 */
 .declaration-details {
-  padding: 0 10px;
-  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0 5px;
+  margin-bottom: 20px;
 }
 
 .info-card {
   background: white;
   border-radius: 15px;
   overflow: hidden;
-  margin-bottom: 15px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -282,24 +273,21 @@ const symptoms = [
 @media screen and (max-width: 768px) {
   .health-notice {
     padding: 15px;
+    gap: 15px;
   }
 
   .notice-title {
     font-size: 20px;
   }
 
-  .symptom-item {
-    padding: 12px;
+  .symptom-label {
+    font-size: 14px;
+    padding: 10px;
   }
 
   .symptom-image-container {
-    width: 80px;
-    height: 80px;
-  }
-
-  .symptom-label {
-    font-size: 14px;
-    padding: 6px 12px;
+    height: 150px;
+    padding: 10px;
   }
 
   .text-box {
@@ -308,7 +296,7 @@ const symptoms = [
 
   .message-bubble {
     font-size: 14px;
-    padding: 12px 16px;
+    padding: 20px 16px;
   }
 
   .character-image {
