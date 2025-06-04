@@ -8,10 +8,8 @@
       <img src="../assets/卡通人像.png" alt="avatar" class="avatar-abs" />
       <div class="traveler-content">
         <p class="traveler-title">各位进出境旅客朋友：</p>
-        <p class="traveler-p indent">欢迎从中国海关通关，从出发至到达，中国海关将为您提供便捷、高效的通关服务，为您的旅途带来更好的体验。</p>
-        <p class="traveler-p indent">守法通关，文明出行，是我们对您的期待，也是您对我们的支持。为方便您的出行，我们准备了海关通关注意事项和规定查询，希望对您有所帮助。</p>
-        <p class="traveler-p indent">为了您的通关顺利，请在出行前提前了解您的健康状况、旅行和居住情况是否符合进出境卫生检疫要求；您携带进出境的行李物品是否符合出入境相关规定。具体规定可点击下方"进入查询"按钮查询，也可登录海关总署门户网站等官方网站查询。</p>
-        <p class="traveler-p indent">如您在办理海关业务中遇到疑难问题需要帮助，或者对海关的工作提出意见建议，可拨打中国海关服务热线（<a class="service-phone" href="tel:12360">12360</a>）。也可在通关时联系海关工作人员，我们将及时回应您的需求。</p>
+        <p class="traveler-p indent">中国海关将为您提供便捷、高效的通关服务，为您的旅途带来更好的体验。为方便您的出行，我们准备了海关通关注意事项和规定查询，您可点击下方“进入查询”按钮查询，也可登录海关总署门户网站等官方网站查询。</p>
+        <p class="traveler-p indent">如您在办理海关业务中遇到疑难问题需要帮助，或者对海关的工作提出意见建议，可拨打中国海关服务热线（12360）。也可在通关时联系海关工作人员，我们将及时回应您的需求。 </p>
       </div>
       <div class="button-row">
         <van-button type="primary" size="large" class="main-btn" @click="enterApp">进入查询</van-button>
@@ -88,7 +86,7 @@ const enterApp = () => {
   font-size: 17px;
   line-height: 2.1;
   text-align: left;
-  margin-bottom: 18px;
+  margin-bottom: 30px;
 }
 .traveler-title {
   font-weight: bold;
@@ -154,13 +152,14 @@ const enterApp = () => {
     left: -15px;
   }
   .cloud-abs {
-    width: 54px;
+    width: 70px;
     top: 26px;
-    right: 3px;
+    right: 19px;
   }
   .traveler-content {
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.9;
+    margin-top: 30px;
   }
   .main-btn {
     font-size: 16px;
