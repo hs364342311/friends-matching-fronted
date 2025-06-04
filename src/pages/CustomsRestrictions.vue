@@ -57,7 +57,7 @@
           <span class="click-text">点击查看</span>
         </div>
         <div class="card-content">
-          <h3 class="card-title">《禁止携带、邮寄进境的动植物及其产品名录》</h3>
+          <h3 class="card-title">《中华人民共和国禁止携带、邮寄进境的动植物及其产品名录》</h3>
         </div>
       </div>
 
@@ -109,7 +109,7 @@
     <van-popup v-model:show="showAnimalPlantDialog" position="bottom" :style="{ height: '70%' }" round>
       <div class="popup-container">
         <div class="popup-header">
-          <h3>禁止携带、邮寄进境的动植物及其产品名录</h3>
+          <h3>中华人民共和国禁止携带、邮寄进境的动植物及其产品名录</h3>
           <van-icon name="cross" size="20" @click="showAnimalPlantDialog = false" class="close-icon"/>
         </div>
         <div class="popup-content">
