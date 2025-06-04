@@ -16,7 +16,7 @@
             <div class="nav-label">禁止和限制携带通关物品</div>
           </router-link>
         </div>
-        
+
         <div class="nav-row">
           <img src="@/assets/行李物品通关规定查询.png" class="character-img" alt="行李物品通关规定查询" />
           <router-link to="/traveller/item/detail" class="nav-item">
@@ -26,7 +26,7 @@
             <div class="nav-label">行李物品通关规定查询</div>
           </router-link>
         </div>
-        
+
         <div class="nav-row">
           <img src="@/assets/健康申报提示.png" class="character-img" alt="健康申报提示" />
           <router-link to="/traveller/health/notice" class="nav-item">
@@ -36,7 +36,7 @@
             <div class="nav-label">健康申报提示</div>
           </router-link>
         </div>
-        
+
         <div class="nav-row">
           <img src="@/assets/转到海关总署官方网站.png" class="character-img" alt="转到海关总署官方网站" />
           <a href="http://www.customs.gov.cn/customs/302249/index.html" class="nav-item" target="_blank">
@@ -49,9 +49,9 @@
       </div>
 
       <!-- 底部版权信息 -->
-      <div class="footer">
-        成都海关 中国银行四川省分行联合开发
-      </div>
+<!--      <div class="footer">-->
+<!--        成都海关 中国银行四川省分行联合开发-->
+<!--      </div>-->
     </div>
   </div>
 </template>
@@ -183,43 +183,43 @@
   .nav-container {
     padding: 15px 12px 80px 12px;
   }
-  
+
   .cloud-img {
     width: 60px;
     margin: 5px 0 0 8px;
   }
-  
+
   .nav-title {
     font-size: 21px;
     padding: 8px;
   }
-  
+
   .nav-list {
     gap: 36px;
     padding: 0 5px;
   }
-  
+
   .character-img {
     width: 97px;
     height: 80px;
     margin-right: 18px;
   }
-  
+
   .nav-item {
     padding: 12px 16px 12px 30px;
     min-height: 40px;
   }
-  
+
   .nav-icon-container {
     width: 28px;
     height: 28px;
     margin-right: 14px;
   }
-  
+
   .nav-label {
     font-size: 16px;
   }
-  
+
   .footer {
     padding: 12px 0;
     font-size: 13px;

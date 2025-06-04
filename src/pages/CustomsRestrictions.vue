@@ -7,7 +7,7 @@
       <div class="title-container">
         <h1 class="main-title">禁限物品介绍</h1>
       </div>
-      
+
       <!-- 提示区域 -->
       <div class="notice-section">
         <img src="@/assets/卡通人物-禁限物品介绍.png" alt="customs officer" class="officer-image">
@@ -285,7 +285,7 @@ const restrictedItems = [
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 0px;
   transition: all 0.3s ease;
 }
 
@@ -328,7 +328,7 @@ const restrictedItems = [
   .item-card {
     padding: 10px;
   }
-  
+
   .item-image-container {
     /* width: 80px;
     height: 80px;
@@ -503,4 +503,4 @@ const restrictedItems = [
     margin-top: 8px;
   }
 }
-</style> 
+</style>

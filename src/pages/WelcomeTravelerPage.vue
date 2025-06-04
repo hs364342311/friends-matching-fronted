@@ -17,9 +17,9 @@
         <van-button type="primary" size="large" class="main-btn" @click="enterApp">进入查询</van-button>
       </div>
     </div>
-    <div class="traveler-footer">
-      成都海关 中国银行四川省分行联合开发
-    </div>
+<!--    <div class="traveler-footer">-->
+<!--      成都海关 中国银行四川省分行联合开发-->
+<!--    </div>-->
   </div>
 </template>
 

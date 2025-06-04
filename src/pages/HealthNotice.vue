@@ -54,7 +54,7 @@
           如实申报健康状况及相关信息，有发热、咳嗽、呼吸困难、呕吐、腹泻、皮疹、不明原因皮下出血等传染病症状，或已经诊断患有传染性疾病的进境出境人员须主动向海关进行健康申报。
         </div>
       </div>
-      
+
       <!-- 禁止情形 -->
       <div class="info-card">
         <div class="info-header">
@@ -188,7 +188,7 @@ const symptoms = [
   padding: 15px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
   font-size: 16px;
   font-weight: 500;
   text-align: center;
@@ -303,4 +303,4 @@ const symptoms = [
     width: 50px;
   }
 }
-</style> 
+</style>
