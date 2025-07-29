@@ -55,9 +55,9 @@
         <div class="result-card">
           <div class="result-header">
             <h2>查询结果</h2>
-            <van-icon 
-              name="clear" 
-              class="clear-icon" 
+            <van-icon
+              name="clear"
+              class="clear-icon"
               @click="clearSearch"
             />
           </div>
@@ -149,6 +149,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import myAxios from '../plugins/myAxios.ts';
+import {record} from "../api/moduleClick"
 
 const searchKeyword = ref('');
 const searchResult = ref(null);
@@ -163,6 +164,11 @@ onMounted(() => {
     top: 0,
     behavior: 'instant' // 使用 'instant' 而不是 'smooth' 以确保立即滚动
   });
+  record({
+    moduleName: "行李物品通关规定查询",
+    appVersion: "1",
+    modulePath: "/item/detail"
+  })
 });
 
 const onSearch = async () => {
@@ -176,6 +182,7 @@ const onSearch = async () => {
     const response = await myAxios.get('/search/v1/forbiddenGoodsIndex/page', {
       params: {
         keyword: searchKeyword.value,
+        appVersion: "1",
         pageNo: 1,
         pageSize: 10
       }

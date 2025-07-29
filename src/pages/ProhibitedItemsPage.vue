@@ -15,7 +15,7 @@
           <div class="section-header">
             <h2 class="section-title">中华人民共和国禁止进出境物品表</h2>
           </div>
-          
+
           <!-- 禁止进境物品部分 -->
           <div class="info-card">
             <div class="info-header">
@@ -101,6 +101,16 @@
 
 <script setup>
 // No additional script needed for now
+import { onMounted } from 'vue';
+import {record} from "../api/moduleClick"
+
+onMounted(async () => {
+  record({
+    moduleName: "禁止和限制携带通关物",
+    appVersion: "1",
+    modulePath: "/prohibited/items"
+  })
+});
 </script>
 
 <style scoped>
@@ -252,4 +262,4 @@
     margin-bottom: 10px;
   }
 }
-</style> 
+</style>

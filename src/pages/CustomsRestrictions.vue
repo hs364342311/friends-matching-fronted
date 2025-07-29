@@ -190,7 +190,16 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
+import {record} from "../api/moduleClick"
+onMounted(() => {
+  record({
+    moduleName: "禁止和限制携带通关物",
+    appVersion: "2",
+    modulePath: "/traveller/customs/restrictions"
+  })
+})
+
 
 // 弹出框显示状态
 const showProhibitedDialog = ref(false)

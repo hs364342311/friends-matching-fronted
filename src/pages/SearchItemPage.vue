@@ -44,6 +44,15 @@ import {useRoute} from "vue-router";
 import myAxios from '../plugins/myAxios.ts';
 import qs from 'qs';
 import ItemCardList from "../components/ItemCardList.vue";
+import {record} from "../api/moduleClick"
+
+onMounted(async () => {
+  record({
+    moduleName: "行李物品通关规定查询",
+    appVersion: "1",
+    modulePath: "/item/detail"
+  })
+});
 
 const route = useRoute(); // 获取查询参数
 

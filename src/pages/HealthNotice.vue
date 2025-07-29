@@ -69,6 +69,17 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue';
+import {record} from "../api/moduleClick"
+
+onMounted(() => {
+  record({
+    moduleName: "健康申报提示",
+    appVersion: "2",
+    modulePath: "/traveller/health/notice"
+  })
+})
+
 const symptoms = [
   {
     label: '发热',

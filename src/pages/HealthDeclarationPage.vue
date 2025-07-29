@@ -50,6 +50,16 @@
 
 <script setup>
 // No additional script needed for now
+import { onMounted } from 'vue';
+import {record} from "../api/moduleClick"
+
+onMounted(async () => {
+  record({
+    moduleName: "健康申报规定",
+    appVersion: "1",
+    modulePath: "/health/declaration"
+  })
+});
 </script>
 
 <style scoped>

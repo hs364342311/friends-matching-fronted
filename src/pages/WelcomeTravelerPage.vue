@@ -23,6 +23,16 @@
 
 <script setup>
 import { useRouter } from 'vue-router';
+import { onMounted } from 'vue';
+import {record} from "../api/moduleClick"
+
+onMounted(async () => {
+  record({
+    moduleName: "旅客版欢迎页面",
+    appVersion: "2",
+    modulePath: "/traveller/welcome"
+  })
+});
 const router = useRouter();
 const enterApp = () => {
   router.push('/traveller/nav');

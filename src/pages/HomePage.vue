@@ -51,9 +51,9 @@
       </div>
 
       <!-- 底部反馈区域 -->
-<!--      <div class="feedback-section">-->
-<!--        <p>如对小程序有更多意见建议，欢迎在此留言</p>-->
-<!--      </div>-->
+      <!--      <div class="feedback-section">-->
+      <!--        <p>如对小程序有更多意见建议，欢迎在此留言</p>-->
+      <!--      </div>-->
 
       <!-- 底部版权信息 -->
       <div class="footer">
@@ -65,6 +65,17 @@
 
 <script setup>
 // No additional script needed for now
+// 组件加载完成后查找标签符合的用户
+import {onMounted} from "vue";
+import {record} from "../api/moduleClick"
+
+onMounted(async () => {
+  record({
+    moduleName: "导航页",
+    appVersion: "1",
+    modulePath: "/home"
+  })
+});
 </script>
 
 <style scoped>

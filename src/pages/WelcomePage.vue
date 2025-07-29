@@ -40,7 +40,16 @@
 
 <script setup>
 import { useRouter } from 'vue-router';
+import { onMounted } from 'vue';
+import {record} from "../api/moduleClick"
 
+onMounted(async () => {
+  record({
+    moduleName: "欢迎页",
+    appVersion: "1",
+    modulePath: "/"
+  })
+});
 const router = useRouter();
 
 const enterApp = () => {

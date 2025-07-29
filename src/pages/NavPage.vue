@@ -58,6 +58,16 @@
 
 <script setup>
 // 无需额外脚本
+import { onMounted } from 'vue';
+import {record} from "../api/moduleClick"
+
+onMounted(async () => {
+  record({
+    moduleName: "导航页",
+    appVersion: "2",
+    modulePath: "/traveller/nav"
+  })
+});
 </script>
 
 <style scoped>
