@@ -5,7 +5,7 @@
       <!-- <h1 class="welcome-title">温馨出行提醒</h1> -->
       <div class="welcome-content">
         <p class="content-text">各位进出境旅客：</p>
-        <p class="content-text" style="text-indent: 2em;">为保障您的国际（地区）旅途通关便捷，提醒关注以下事项：</p>
+        <p class="content-text" style="text-indent: 2em;">为保障您的国际（地区）旅途通关便捷，中国银行温馨提醒您，请务必注意以下事项：</p>
 
         <h2>一、行前准备</h2>
         <ol>
@@ -22,7 +22,9 @@
           <li style="text-indent: 2em;">本小程序将根据国家相关法律法规及规范性文件的调整不定期更新，相关通关规定供您参考；未尽事项，请拨打海关服务热线（<a class="service-phone" href="tel:12360">12360</a>）。</li>
         </ol>
 
-<!--        <p class="footer-message">文明出行始于守法，如实申报既是公民义务，更是对自身权益的最佳保障。<br>祝您安心出行，旅途顺遂！</br></p>-->
+        <p class="footer-message">文明出行始于守法，如实申报既是公民义务，更是对自身权益的最佳保障。祝您安心出行，旅途顺遂！</p>
+
+        <p class="footer-company">中国银行四川省分行</p>
 
       </div>
 
@@ -176,6 +178,10 @@ const enterApp = () => {
   background: linear-gradient(135deg, #1989fa, #39b9f9);
   transform: translateY(-1px);
   transition: all 0.3s ease;
+}
+
+.footer-company {
+  text-align: right;
 }
 
 /* 移动端适配 */
