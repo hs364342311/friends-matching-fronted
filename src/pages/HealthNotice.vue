@@ -10,6 +10,26 @@
       </div>
     </div>
 
+    <a
+      :href="healthCenterUrl"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="health-center-entry"
+    >
+      <div class="entry-icon" aria-hidden="true">
+        <img
+          src="@/assets/四川国际旅游卫生保障中心.jpg"
+          alt="四川国际旅行卫生保健中心"
+          class="entry-icon-image"
+        >
+      </div>
+      <div class="entry-text">
+        <div class="entry-title">四川国际旅行卫生保健中心</div>
+        <div class="entry-subtitle">点击查看官方主页</div>
+      </div>
+      <div class="entry-arrow">↗</div>
+    </a>
+
     <!-- 提示文本区域 -->
     <div class="notice-text">
       <div class="text-box">
@@ -79,6 +99,8 @@ onMounted(() => {
     modulePath: "/traveller/health/notice"
   })
 })
+
+const healthCenterUrl = 'https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI0MjU4NjEyOQ=='
 
 const symptoms = [
   {
@@ -153,6 +175,71 @@ const symptoms = [
   padding: 8px 35px;
   border-radius: 6px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.health-center-entry {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: -4px 15px 0;
+  padding: 14px 16px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(232, 245, 255, 0.96));
+  border: 1px solid rgba(25, 137, 250, 0.18);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(30, 144, 255, 0.12);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.entry-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 6px 14px rgba(30, 144, 255, 0.24);
+  overflow: hidden;
+}
+
+.entry-icon-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.entry-text {
+  min-width: 0;
+  flex: 1;
+}
+
+.entry-title {
+  color: #0F4C81;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.entry-subtitle {
+  margin-top: 4px;
+  color: #5F7D95;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.entry-arrow {
+  color: #1989fa;
+  font-size: 20px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.health-center-entry:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(30, 144, 255, 0.18);
 }
 
 .notice-text {
@@ -289,6 +376,26 @@ const symptoms = [
 
   .notice-title {
     font-size: 20px;
+  }
+
+  .health-center-entry {
+    margin: -2px 10px 0;
+    padding: 12px 14px;
+    gap: 12px;
+  }
+
+  .entry-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+
+  .entry-title {
+    font-size: 15px;
+  }
+
+  .entry-subtitle {
+    font-size: 12px;
   }
 
   .symptom-label {
